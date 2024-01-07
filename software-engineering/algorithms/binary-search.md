@@ -1,5 +1,5 @@
 ---
-id: binary_search
+id: binary-search
 aliases:
   - Binary Search
 tags:
@@ -27,9 +27,44 @@ half and guess again (75). Repeat until the correct number is found. Every guess
 eliminates so many numbers, that it would only ever take 7 attempts to guess the
 right integer in this array from 1 to 100.
 
+> [!warning]
+>
+> Binary search only works on sorted lists. If the list is not sorted, there is
+> no way to know in which "half" the next guess should take place.
+
 ## Complexity
 
-> [!info] See [[big_o|Big O]] notation
+> [!info]
+>
+> See [[big-o|Big O]] notation
 
 In the worst case of $n$ elements, binary search will take $\log_2 n$ steps to
-run. Simple search will take $n$ steps in the worst case.
+run - $O(log(2))$. Simple search will take $n$ steps in the worst case - $O(n)$.
+
+## Example implementation
+
+Here is an implementation of binary search in [[python|Python]]:
+
+```python
+def binary_search(list, item):
+    # low and high are initially the first and last indexes of the list
+    low = 0
+    high = len(list) - 1
+
+    while low <= high:  # while there are still elements to search
+        # get the middle index
+        # this Python syntax is called integer division, which rounds down
+        mid = (low + high) // 2
+
+        guess = list[mid]
+
+        if guess == item:
+            return mid
+        # adjust high or low based on whether the guess was too high or too low
+        # the next iteration will use the new high/low values, searching in the correct half of the list
+        if guess > item:
+            high = mid - 1
+        else:
+            low = mid + 1
+    return None
+```
