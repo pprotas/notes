@@ -17,9 +17,21 @@ Quicksort is a sorting [[algorithms|algorithm]] that is much faster than [[selec
 >
 > See [[big-o|Big O]] notation
 
-In the [[big-o#Worst case|worst case]] case, quicksort is $O(n^2)$, which is pretty slow, just as slow as the selection sort. In the [[big-o#Average case|average case]] case, however, it is $O(n \log{n})$, which is much faster. The complexity of quicksort is best explained with an explanation, so read ahead!
+In the [[big-o#Worst case|worst case]] case, quicksort is $O(n^2)$, which is pretty slow, just as slow as the selection sort. In the [[big-o#Average case|average case]] case (which often resembles the best case), however, it is $O(n \log{n})$, which is much faster.
 
-<!-- TODO: The complexity is explained with an explanation, but there's probably a way to explain it in a more general way, and make the heading about example implementation shorter -->
+### Worst case
+
+In the worst case, you will have to "touch" every element in the array, and then you have to recursively call the quicksort function on the remaining elements. So, for every element $n$, you have to perform $n-1, n-2\ldots 2, 1 \implies \frac{1}{2}\times n \implies n$ operations, since we [[big-o#Constants in Big O notation|ignore the constants]]. This is $O(n) \times O(n) = O(n^2)$.
+
+This worst case is achieved when the pivot is consistently chosen poorly, such as when the pivot is the smallest or biggest number in the array. This leads to highly unbalanced partitions, and this in turn leads to more recursive calls.
+
+### Best case
+
+In the best case, you are able to split the array into two nearly equal parts by choosing a pivot that is in the middle of the array. If you are able to do this, then you've effectively halved the amount of recursive calls you still have to do until you hit the base case, which is an array with 1 element.
+
+By consistently choosing a median pivot, the array is divided into approximately two equal halves at each recursive step, halving the number of remaining recursive calls. This division process, halving the array size each time, directly corresponds to the logarithmic term $log_2\,{n}$ in the complexity. The logarithm base 2 indicates the number of times the array can be halved before it is reduced to a single element (our base case).
+
+You still have to "touch" every element in the array though, you just don't have to do it as many times because the base case is hit sooner. This is why the running time for quicksort in the best case is $O(n \log\,{n})$.
 
 ## Example implementation
 
@@ -89,7 +101,7 @@ In the worst case, there are $O(n)$ levels in the call stack (each element is a 
 
 In the best case, there are still $O(n)$ levels, but each level takes $O(\log{n})$ to complete because the array is divided in half every time. This results in $O(n) \times O(\log{n}) = O(n \log{n})$ time.
 
-Turns out, if you pick a random pivot every time, quicksort will complete in $O(n \log{n})$ on average. This means that the average case is also the best case. Here is how we can modify the code to pick a random pivot:
+Turns out, if you pick a random pivot every time, quicksort will complete in $O(n \log{n})$ on average. This means that the average case is often also the best case. Here is how we can modify the code to pick a random pivot:
 
 ```python
 import random
@@ -103,3 +115,15 @@ def quicksort(arr):
     rhs = [x for x in arr[1:] if x > pivot]
     return quicksort(lhs) + [pivot] + quicksort(rhs)
 ```
+
+## Choosing a pivot
+
+In the example, we chose a random pivot. This works, because on average the chosen pivot will be good enough, and choosing a random number is easy. This is not the only approach to choosing a pivot though.
+
+| Strategy                                                                   | Pros                                                                 | Cons                                                                                                           |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Random element                                                             | Easy to implement, little overhead, good average-case performance    | Worst case is still possible                                                                                   |
+| Median element                                                             | Always balanced partitions, consistent performance                   | Computational overhead of finding the median which can negate the performance gains, implementation complexity |
+| Median-of-three (choose the median of the first, middle and last elements) | Balanced partitions, reduced worst-case chance, simple and efficient | Compromise, not always optimal                                                                                 |
+
+Choosing a strategy can be a trade-off between performance, complexity and the chance of the worst case. You could get creative and fall back to random selection in some recursive steps if the median strategies are too expensive.
