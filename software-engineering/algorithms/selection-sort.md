@@ -7,13 +7,9 @@ tags: []
 
 # Selection sort
 
-A simple algorithm that sorts numbers from highest to lowest would involve
-iterating through a list, and finding the highest number. Put this highest
-number at the top, and repeat until you've exhausted the entire list. This is
-called _selection sort_.
+A simple algorithm that sorts numbers from highest to lowest would involve iterating through a list, and finding the highest number. Put this highest number at the top, and repeat until you've exhausted the entire list. This is called _selection sort_.
 
-Selection sort works, but it's not very fast. [[quicksort]] is a faster sorting
-algorithm.
+Selection sort works, but it's not very fast. [[quicksort]] is a faster sorting algorithm.
 
 ## Complexity
 
@@ -21,14 +17,11 @@ algorithm.
 >
 > See [[big-o|Big O]] notation
 
-This is a $O(n)$ operation (you iterate through the entire list in the worst
-case) that has to be repeated $n$ times (you need to repeat this for every
-element in the list), therefore it is $O(n\times n)$, or $O(n^2)$ time.
+This is a $O(n)$ operation (you iterate through the entire list in the worst case) that has to be repeated $n$ times (you need to repeat this for every element in the list), therefore it is $O(n\times n)$, or $O(n^2)$ time.
 
 ## Example implementation
 
-Here is an implementation of selection sort in [[python|Python]]. This function
-sorts an array of numbers from lowest to highest.
+Here is an implementation of selection sort in [[python|Python]]. This function sorts an array of numbers from lowest to highest.
 
 ```python
 # utility function to find the index of the smallest number in the array

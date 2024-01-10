@@ -7,11 +7,9 @@ tags: []
 
 # Logarithms
 
-Logarithms are inverse of [[exponents]]. If $2^4=2\times2\times2\times2=16$,
-then $\log_2{16} = 4$.
+Logarithms are inverse of [[exponents]]. If $2^4=2\times2\times2\times2=16$, then $\log_2{16} = 4$.
 
-So if you raise a number $n$ to the power of $x$, you get $n^x=y$. This means
-that $log_n{y} = x$.
+So if you raise a number $n$ to the power of $x$, you get $n^x=y$. This means that $log_n{y} = x$.
 
 > [!example] What is $x$ in $log_3{81} = x$?
 >
@@ -25,8 +23,7 @@ that $log_n{y} = x$.
 >
 > Therefore, $x=4$.
 
-Logarithms have a special case if the input of the logarithmic function is $1$.
-In this case, the output will always be 0.
+Logarithms have a special case if the input of the logarithmic function is $1$. In this case, the output will always be 0.
 
 > [!example] What is $x$ in $og_3{1} = x$?
 >
@@ -38,9 +35,7 @@ In this case, the output will always be 0.
 
 ## Logarithms and exponents
 
-Logarithms are just another way of thinking about exponents. The difference is
-that **the exponential form isolates the power**, while **the logarithmic form
-isolates the exponent**.
+Logarithms are just another way of thinking about exponents. The difference is that **the exponential form isolates the power**, while **the logarithmic form isolates the exponent**.
 
 | Logarithmic form | Exponential form |
 | ---------------- | ---------------- |
@@ -52,8 +47,7 @@ Choosing which form to use depends on the context of the mathematical problem.
 
 ## Definition of a logarithm
 
-Generalizing the exmaples above leads us to the formal definition of a
-logarithm.
+Generalizing the exmaples above leads us to the formal definition of a logarithm.
 
 $$ log_b(a) = c \iff b^c = a $$
 
@@ -65,14 +59,9 @@ Both equations describe the same relationship between $a$, $b$, and $c$:
 
 > [!tip]
 >
-> The base of the logarithm is the same as the base of the exponent. Remember
-> this when converting equations from the logartihmic form to exponential form,
-> and the other way around.
+> The base of the logarithm is the same as the base of the exponent. Remember this when converting equations from the logartihmic form to exponential form, and the other way around.
 
-The following restrictions apply to the variables:The following restrictions
-apply to the variables: The following restrictions apply to the variables: The
-following restrictions apply to the variables: The following restrictions apply
-to the variables: The following restrictions apply to the variables:
+The following restrictions apply to the variables:The following restrictions apply to the variables: The following restrictions apply to the variables: The following restrictions apply to the variables: The following restrictions apply to the variables: The following restrictions apply to the variables:
 
 | Restriction | Reasoning                                                                                                                                 |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
