@@ -25,19 +25,24 @@ Big O notation establishes a worst-case run time. An algorithm might find the in
 
 ### Average case
 
+The average case means that the algorithm will run in this time on average. So if you run the algorithm a bunch of times, on average it will come close to this run time. [[quicksort|Quicksort]] run in $O(n^2)$ in the worst case, but in $O(n \log{n})$ in the average case. So even though the worst case is pretty slow, on average it will be pretty fast.
+
 ## Common Big O run times
 
-| Big O               | Example                                                 |
-| ------------------- | ------------------------------------------------------- |
-| $O(log(n))$         | Binary search (fast)                                    |
-| $O(n)$              | Simple search (slow)                                    |
-| $O(n\times log(n))$ | [[quicksort\|Quicksort]] (fast)                         |
-| $O(n^2)$            | [[selection-sort\|Selection sort]] (slow)               |
-| $O(n!)$             | [[traveling-salesperson\|Traveling salesperson]] (slow) |
+Here are some common run times, sorted by their efficiency, from fastest to slowest:
+
+| Name               | Big O          | Example                                                 |
+| ------------------ | -------------- | ------------------------------------------------------- |
+| Constant           | $O(1)$         | Accessing an [[arrays\|array]] element by its index     |
+| Logarithmic        | $O(log\,n)$    | Binary search (fast)                                    |
+| Linear             | $O(n)$         | Simple search (slow)                                    |
+| Linear logarithmic | $O(n\;log\,n)$ | [[quicksort\|Quicksort]] (fast)                         |
+| Quadratic          | $O(n^2)$       | [[selection-sort\|Selection sort]] (slow)               |
+| Factorial          | $O(n!)$        | [[traveling-salesperson\|Traveling salesperson]] (slow) |
 
 ## Constants in Big O notation
 
-Constants in Big O notation are often ignored. For example, during [[selection-sort|selection sort]], the amount of list items that you'll have to traverse decreases over time, as the list progressively becomes more sorted. At first you'll have to traverse $n$ items, then $n - 1, n - 2, n - 3 \ldots 2, 1$. On average, you'll have to check a list that has $\frac{1}{2}\times n$ elements. The runtime would then be $O(n\times\frac{1}{2}\times n)$. But constants like $\frac{1}{2}$ are ignored, so the runtime is simply $O(n^2)$.
+Constants in Big O notation are often ignored. For example, during selection sort, the amount of list items that you'll have to traverse decreases over time, as the list progressively becomes more sorted. At first you'll have to traverse $n$ items, then $n - 1, n - 2, n - 3 \ldots 2, 1$. On average, you'll have to check a list that has $\frac{1}{2}\times n$ elements. The runtime would then be $O(n\times\frac{1}{2}\times n)$. But constants like $\frac{1}{2}$ are ignored, so the runtime is simply $O(n^2)$.
 
 ### Time constants
 
