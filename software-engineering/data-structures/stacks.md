@@ -9,7 +9,7 @@ tags: []
 
 # Stacks
 
-A stack, when referring to the data structure, is a collection of elements that you can interact with in a specific order. While the elements of [[arrays]] can be accessed randomly, the elements of a stack can not. Instead, you can _push_ elements to the top of the stack, and you can _pop_ elements from the top of the stack.
+A stack, when referring to the data structure, is a collection of elements that you can interact with in a specific order. While the elements of [[arrays]] can be accessed randomly, the elements of a stack can not. Instead, you can _push_ elements to the top of the stack, and you can _pop_ elements from the top of the stack. This ordering is often called _last-in-first-out_ (LIFO), compared to the _first-in-first-out_ approach of [[queues]].
 
 When pushing an element onto the stack, it is always added to the top. You can not add an element to the middle or bottom of the stack. When popping an element form the stack, you access the topmost element (the one that has most recently been pushed), read its value, and then remove it from the stack. This means that popping involves a read and a delete operation.
 
