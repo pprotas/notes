@@ -20,3 +20,10 @@ A different example of a problem that can be solved with a greedy algorithm is t
 > [!info]
 >
 > There are many algorithms that would be considered "non-greedy". These algorithms often fit into strategies like [[divide-and-conquer]] or [[dynamic-programming|dynamic programming]]. Algorithms that follow these strategies are not greedy, since they systematically approach the problem, instead of making locally optimal choices.
+
+A problem needs to meet two criteria in order for a greedy algorithm to be a viable approach:
+
+1. Greedy choice property - the algorithm does not reconsider its choices. The choices are made iteratively, one after another and there is never an attempt to backtrack.
+2. [[optimal-substructure|Optimal substructure]] - the optimal solution (or its approximation) can be achieved from the combination of optimal solutions to its subproblems.
+
+This first point is the main difference between greedy algorithms and [[dynamic-programming|dynamic programming]]. Dynamic programming solves the subproblems first, and then combines them toward the optimal solution. Greedy algorithms make locally optimal choices and then solve the subproblems that arise later.

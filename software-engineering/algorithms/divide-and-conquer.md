@@ -11,8 +11,10 @@ Divide and conquer (_D&C_) is a strategy for solving problems [[recursion|recurs
 
 D&C works like this:
 
-1. Figure out a simple case as the base case
-2. Figure out how to reduce your problem and get to the base case
+1. Set the simplest solution to the problem that can be solved directly as the base case
+2. Repeatedly (often recursively) break down the problem down into smaller subproblems until they are the base case
+
+In a way, there are two or more subproblems that keep getting reduced until they become the base case. This means that the same subproblems are not seen over and over again, but new, smaller subproblems are generated each time. This is different from [[dynamic-programming|dynamic programming]], where [[overlapping-subproblems|the same subproblems are seen over and over again]].
 
 For example, when recursively summing an [[arrays|array]] of numbers, you would first figure out how to sum an array with just one number. This is step 1, the base case. Then, you would figure out how to approach an array with multiple numbers, while at the same time attempting to approach this base case you've just set. This is step 2.
 
