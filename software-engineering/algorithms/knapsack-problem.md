@@ -7,7 +7,7 @@ tags: []
 
 # Knapsack problem
 
-The knapsack problem describes the problem of fitting as many items as possible into a bag, taking into account the value of the items. It is an example of a problem that can be approached with a [[algorithms#Greedy algorithms|greedy algorithm]], although the greedy algorithm will not always find the optimal solution.
+The knapsack problem describes the problem of fitting as many items as possible into a bag, taking into account the value of the items. It is an example of a problem that can be approached with a [[greedy-algorithms|greedy algorithm]], although the greedy algorithm will not always find the optimal solution.
 
 Let's say that these are the possible items that can be put into the bag:
 

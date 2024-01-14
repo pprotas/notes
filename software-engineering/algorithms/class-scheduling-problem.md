@@ -7,7 +7,7 @@ tags: []
 
 # Class scheduling problem
 
-The class scheduling problem describes the problem of fitting as many classes into a classroom as possible. It is an example of a problem that can be solved by a [[algorithms#Greedy algorithms|greedy algorithm]].
+The class scheduling problem describes the problem of fitting as many classes into a classroom as possible. It is an example of a problem that can be solved by a [[greedy-algorithms|greedy algorithm]].
 
 Let's say that these are the possible classes that can be scheduled:
 

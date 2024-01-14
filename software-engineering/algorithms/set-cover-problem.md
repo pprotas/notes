@@ -7,7 +7,7 @@ tags: []
 
 # Set cover problem
 
-The set cover problem involves finding the smallest subset of [[sets]] that together contain all elements in a universal set. In other words, it's about selecting the fewest groups from a collection where each group contains certain elements, so that all items are included at least once. It is an example of a problem that can be [[algorithms#Approximation algorithms|approximated]] by a [[algorithms#Greedy algorithms|greedy algorithm]].
+The set cover problem involves finding the smallest subset of [[sets]] that together contain all elements in a universal set. In other words, it's about selecting the fewest groups from a collection where each group contains certain elements, so that all items are included at least once. It is an example of a problem that can be [[algorithms#Approximation algorithms|approximated]] by a [[greedy-algorithms|greedy algorithm]].
 
 That is a mouthful, so let's look at an example. Let's say that you have the following collection of sets:
 
