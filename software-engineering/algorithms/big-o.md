@@ -9,6 +9,10 @@ tags: []
 
 Big O notation is special notation that tells you how fast an algorithm is. It tells you this, by giving you an idea of how the running time of the algorithm increases as the size of the input increases.
 
+<!-- TODO: Space complexity, and how it differs from time complexity. -->
+<!-- TODO: Update notes on algorithms with both space and time complexity. -->
+<!-- TODO: Write about space-time trade off. -->
+
 ## Notation
 
 The Big O notation is written by a "big O" $O$, followed by the number of operations, often expressed in $n$.
