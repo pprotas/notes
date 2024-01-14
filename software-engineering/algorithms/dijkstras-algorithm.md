@@ -7,7 +7,7 @@ tags: []
 
 # Dijkstra's algorithm
 
-Dijkstra's algorithm is a search [[algorithms|algorithm]] that runs on [[graphs#Weighted graphs|weighted graphs]]. It can answer what is the fastest path between two distinct nodes. Compare this to the [[breadth-first-search|breadth first search]], which can answer what is the path between two nodes with the least amount of edges.
+Dijkstra's algorithm is a [[algorithms#Greedy algorithms|greedy algorithm]] used for searching that runs on [[graphs#Weighted graphs|weighted graphs]]. It can answer what is the fastest path between two distinct nodes. Compare this to the [[breadth-first-search|breadth first search]], which can answer what is the path between two nodes with the least amount of edges.
 
 Dijkstra's algorithm traverses all nodes in the graph to find the lowest amounts of weights it would take to visit each node, and through which parent node. You need to keep track of these weights and parents, and once all nodes have been traversed it's possible to backtrack from the target node to the root node through the parents to find the fastest path to the target node.
 

@@ -7,18 +7,9 @@ tags: []
 
 # Recursion
 
-Recursion is where a function calls itself. This is a concept in programming, used when implementing various [[algorithms]]. While all algorithms that use recursion can also be implemented by using iterative loops, both approaches have their pros and cons.
+Recursion is when a function calls itself in its own definition. This is a concept in programming, used when implementing various [[algorithms]]. While all algorithms that use recursion can also be implemented by using iterative loops, both approaches have their pros and cons.
 
-<!-- deno-fmt-ignore-start -->
-Using loops can result in a performance boost, or they can result in more
-efficient use of resources like memory. On the other hand, code involving loops
-(especially nested loops) can be harder to read and understand. This is where
-recursion shines; as long as you understand the concept of recursion, code can
-be easier to read and understand. This can come at the cost of
-[[call-stack#Call stacks and recursion|memory problems]], or slower code.
-The programming language used, and the algorithm in question are important factors
-to consider when choosing between loops or recursion.
-<!-- deno-fmt-ignore-end -->
+Using loops can result in a performance boost, or they can result in more efficient use of resources like memory. On the other hand, code involving loops (especially nested loops) can be harder to read and understand. This is where recursion shines; as long as you understand the concept of recursion, code can be easier to read and understand. This can come at the cost of [[call-stack#Call stacks and recursion|memory problems]], or slower code. The programming language used, and the algorithm in question are important factors to consider when choosing between loops or recursion.
 
 ## Structure of a recursive function
 
