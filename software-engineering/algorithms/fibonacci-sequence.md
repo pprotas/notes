@@ -89,7 +89,7 @@ def fibonacci(n):
     return fibonacci_numbers[n]
 ```
 
-There is no recursion used here at all. It's just a loop that goes from $2\cdots n-1$ and calculates each Fibonacci number on the way, and then _tabulating_ (caching) them in an array. At the end, the value at index $n$ in the array holds the Fibonacci number for $n$.
+There is no recursion used here at all. It's just a loop that goes from $2\dots n-1$ and calculates each Fibonacci number on the way, and then _tabulating_ (caching) them in an array. At the end, the value at index $n$ in the array holds the Fibonacci number for $n$.
 
 Not only is this implementation more efficient, it also does not suffer from stack overflow. You can calculate the Fibonacci number for very large $n$, almost instantly.
 
@@ -116,4 +116,4 @@ def fibonacci(n):
     return b
 ```
 
-There is no recursion used here at all. It's just a loop that goes from $2\cdots n-1$ and calculates each Fibonacci number on the way, and then caching them in `a` and `b`. At the end, the value `b` holds $F(n - 1) + F(n - 2)$, which is the Fibonacci number for $n$.
+There is no recursion used here at all. It's just a loop that goes from $2\dots n-1$ and calculates each Fibonacci number on the way, and then caching them in `a` and `b`. At the end, the value `b` holds $F(n - 1) + F(n - 2)$, which is the Fibonacci number for $n$.
